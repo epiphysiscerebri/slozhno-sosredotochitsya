@@ -116,7 +116,7 @@
 
   /* Фоновая картинка в хедере */
 
-  .header {
+  .page.theme_auto .header {
     min-block-size: 768px;
     background-image: url(../images/cover-image-dark.png);
     background-repeat: no-repeat;
@@ -126,7 +126,7 @@
 
   /* Элемент rec в хедере */
 
-  .header__theme-menu-rec {
+  .page.theme_auto .header__theme-menu-rec {
     position: absolute;
     right: 48px;
     top: 20px;
@@ -138,7 +138,7 @@
 
   /* Верхние уголки */
 
-  .header__theme-menu-rec::after {
+  .page.theme_auto .header__theme-menu-rec::after {
     content: '';
     display: inline-block;
     background-image: url('../images/ellipse.png');
@@ -152,7 +152,7 @@
     border-right: 1px solid var(--text-color-buttons);
   }
 
-  .header_layout_paragraph::before {
+  .page.theme_auto .header_layout_paragraph::before {
     content: '';
     display: inline-block;
     width: 23px;
@@ -166,7 +166,7 @@
 
   /* Нижние уголки */
 
-  .title__footer::after {
+  .page.theme_auto .title__footer::after {
     content: '';
     display: inline-block;
     width: 23px;
@@ -178,7 +178,7 @@
     border-right: 1px solid var(--text-color-buttons);
   }
 
-  .title__footer::before {
+  .page.theme_auto .title__footer::before {
     content: '';
     display: inline-block;
     width: 23px;
@@ -190,3 +190,4 @@
     border-left: 1px solid var(--text-color-buttons);
   }
 }
+
