@@ -9,4 +9,179 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --main-font: 'IBM Plex Mono', sans-serif;
+  --bg-color: #FFF1F7;
+  --title-bg-color: #FFC2E6;
+  --text-color-main: #353430;
+  --text-color-title: #FFC2E6;
+  --text-color-title-main: #353430;
+  --text-color-subtitle: #FF8DCB;
+  --text-color-buttons: #353430;
+  --text-color-link: #353430;
+  --link-bg-color: #FFC2E6;
+  --link-border-color: #353430;
+}
+
+/* Фоновая картинка в хедере */
+
+.page.theme_light .header {
+  min-block-size: 768px;
+  background-image: url(../images/cover-image-light.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Элемент rec в хедере */
+
+.page.theme_light .header__theme-menu-rec {
+  position: absolute;
+  right: 48px;
+  top: 20px;
+  font-size: 18px;
+  align-self: center;
+  text-transform: uppercase;
+  color: transparent;
+}
+
+/* Верхние уголки */
+
+.page.theme_light .header__theme-menu-rec::after {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 35px;
+  top: 0;
+  border-top: 1px solid var(--text-color-buttons);
+  border-right: 1px solid var(--text-color-buttons);
+}
+
+.page.theme_light .header_layout_paragraph::before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 2%;
+  top: 82%;
+  border-bottom: 1px solid var(--text-color-buttons);
+  border-left: 1px solid var(--text-color-buttons);
+}
+
+/* Нижние уголки */
+
+.page.theme_light .title__footer::after {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 703px;
+  bottom: 443px;
+  border-top: 1px solid var(--text-color-buttons);
+  border-right: 1px solid var(--text-color-buttons);
+}
+
+.page.theme_light .title__footer::before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  right: 704px;
+  top: 442px;
+  border-bottom: 1px solid var(--text-color-buttons);
+  border-left: 1px solid var(--text-color-buttons);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-font: 'IBM Plex Mono', sans-serif;
+    --bg-color: #FFF1F7;
+    --title-bg-color: #FFC2E6;
+    --text-color-main: #353430;
+    --text-color-title: #FFC2E6;
+    --text-color-title-main: #353430;
+    --text-color-subtitle: #FF8DCB;
+    --text-color-buttons: #353430;
+    --text-color-link: #353430;
+    --link-bg-color: #FFC2E6;
+    --link-border-color: #353430;   
+    }
+
+  /* Фоновая картинка в хедере */
+
+  .header {
+    min-block-size: 768px;
+    background-image: url(../images/cover-image-light.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Элемент rec в хедере */
+
+  .header__theme-menu-rec {
+    position: absolute;
+    right: 48px;
+    top: 20px;
+    font-size: 18px;
+    align-self: center;
+    text-transform: uppercase;
+    color: transparent;
+  }
+
+  /* Верхние уголки */
+
+  .header__theme-menu-rec::after {
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 35px;
+    top: 0;
+    border-top: 1px solid var(--text-color-buttons);
+    border-right: 1px solid var(--text-color-buttons);
+  }
+
+  .header_layout_paragraph::before {
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 2%;
+    top: 82%;
+    border-bottom: 1px solid var(--text-color-buttons);
+    border-left: 1px solid var(--text-color-buttons);
+  }
+
+  /* Нижние уголки */
+
+  .title__footer::after {
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 703px;
+    bottom: 443px;
+    border-top: 1px solid var(--text-color-buttons);
+    border-right: 1px solid var(--text-color-buttons);
+  }
+
+  .title__footer::before {
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    right: 704px;
+    top: 442px;
+    border-bottom: 1px solid var(--text-color-buttons);
+    border-left: 1px solid var(--text-color-buttons);
+  }
 }
