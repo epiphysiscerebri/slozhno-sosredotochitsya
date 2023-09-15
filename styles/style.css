@@ -45,6 +45,54 @@
   text-align: center;
 }
 
+.header__theme-menu-rec {
+  position: absolute;
+  right: 48px;
+  top: 20px;
+  font-size: 18px;
+  align-self: center;
+  text-transform: uppercase;
+  color: var(--text-color-subtitle);
+}
+
+/* Верхние уголки */
+
+.header__theme-menu::after {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  right: 21px;
+  top: 20px;
+  border-top: 1px solid var(--text-color-buttons);
+  border-right: 1px solid var(--text-color-buttons);
+}
+
+.header__theme-menu-rec::after {
+  content: '';
+  display: inline-block;
+  background-image: url('../images/ellipse.png');
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 35px;
+  top: 0;
+}
+
+.header_layout_paragraph::before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 2%;
+  top: 82%;
+  border-bottom: 1px solid var(--text-color-buttons);
+  border-left: 1px solid var(--text-color-buttons);
+}
+
 .header__theme-menu-item:hover {
   outline: 1px solid var(--text-color-buttons);
 }
@@ -76,6 +124,8 @@
 }
 
 .header__title {
+  display: flex;
+  gap: 95px;
   text-shadow: 4px 4px 0px #FF0070;
   color: var(--text-color-title, #DB00FF);
   font-family: var(--main-font);
@@ -85,6 +135,14 @@
   align-self: end;
   margin-block-start: 0.67em;
   margin-block-end: 43px;
+}
+
+.header__title_first-word {
+  display: block;
+}
+
+.header__title_second-word {
+  display: block;
 }
 
 .header_layout_paragraph {
@@ -177,7 +235,6 @@ h3.heading.title-decor {
 .main_paragraph {
   margin-block-start: 0;
   margin-block-end: 0;
-  /* line-height: 23.8px; */
   line-height: 1.3179em;
   padding-top: 9px;
   font-size: 18px;
@@ -212,7 +269,6 @@ h3.heading.title-decor {
   column-gap: 10px;
   row-gap: 19px;
   grid-template-columns: 1fr 2fr;
-  /* grid-template-rows: 1fr 9fr; */
 }
 
 .layout-articles_third-section {
@@ -264,7 +320,7 @@ h3.heading.title-decor {
   grid-row-end: 3;
 }
 
-.fourth-section_third-img {  /* display: none; */
+.fourth-section_third-img {
   width: 100%;
   height: 99%;
   grid-column-start: 2;
@@ -309,6 +365,32 @@ h3.heading.title-decor {
   font-family: var(--main-font);
   font-size: 157px;
   font-weight: 700;
+}
+
+/* Нижние уголки */
+
+.title__footer::after {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 703px;
+  bottom: 443px;
+  border-top: 1px solid var(--text-color-buttons);
+  border-right: 1px solid var(--text-color-buttons);
+}
+
+.title__footer::before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  right: 704px;
+  top: 442px;
+  border-bottom: 1px solid var(--text-color-buttons);
+  border-left: 1px solid var(--text-color-buttons);
 }
 
 
