@@ -20,38 +20,29 @@
   --text-color-link: #353430;
   --link-bg-color: #FFC2E6;
   --link-border-color: #353430;
+  --text-shadow: #FF0070;
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .page.theme_light {
+    --text-shadow: #FF8DCB;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+  .page.theme_light {
+    --text-shadow: #FF8DCB;
+  }
 }
 
 /* Фоновая картинка в хедере */
 
 .page.theme_light .header {
   background-image: url(../images/cover-image-light.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .page.theme_light .header__theme-menu-rec {
-  color: transparent;
-  position: absolute;
-  right: 48px;
-  top: 20px;
-  font-size: 18px;
-  align-self: center;
-  text-transform: uppercase;
-}
-
-.page.theme_light .header__theme-menu-rec::after {
-  content: '';
-  display: inline-block;
-  background-image: url('../images/ellipse.png');
-  background-repeat: no-repeat;
-  width: 23px;
-  height: 23px;
-  position: absolute;
-  left: 35px;
-  top: 0;
-  opacity: 0;
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -67,38 +58,28 @@
     --text-color-link: #353430;
     --link-bg-color: #FFC2E6;
     --link-border-color: #353430;   
+  }
+
+  @media (min-width: 376px) and (max-width: 768px) {
+    :root {
+      --text-shadow: #FF8DCB;
     }
+  }
+
+  @media (min-width: 0px) and (max-width: 375px) {
+    :root {
+      --text-shadow: #FF8DCB;
+    }
+  }
 
   /* Фоновая картинка в хедере */
 
   .page.theme_auto .header__theme-menu-rec {
-    color: transparent;
-    position: absolute;
-    right: 48px;
-    top: 20px;
-    font-size: 18px;
-    align-self: center;
-    text-transform: uppercase;
-  }
-  
-  .page.theme_auto .header__theme-menu-rec::after {
-    content: '';
-    display: inline-block;
-    background-image: url('../images/ellipse.png');
-    background-repeat: no-repeat;
-    width: 23px;
-    height: 23px;
-    position: absolute;
-    left: 35px;
-    top: 0;
-    opacity: 0;
+    display: none;
   }
 
   .page.theme_auto .header {
     background-image: url(../images/cover-image-light.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
   }
 
 }
