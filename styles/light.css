@@ -9,7 +9,7 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --main-font: 'IBM Plex Mono', sans-serif;
+  --main-font: 'IBM Plex Mono', monospace;
   --bg-color: #FFF1F7;
   --title-bg-color: #FFC2E6;
   --text-color-main: #353430;
@@ -24,13 +24,13 @@
   --bg-img: url(../images/cover-image-light.png);
 }
 
-@media (min-width: 376px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .page.theme_light {
     --text-shadow: #FF8DCB;
   }
 }
 
-@media (min-width: 0px) and (max-width: 375px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .page.theme_light {
     --text-shadow: #FF8DCB;
   }
@@ -48,7 +48,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --main-font: 'IBM Plex Mono', sans-serif;
+    --main-font: 'IBM Plex Mono', monospace;
     --bg-color: #FFF1F7;
     --title-bg-color: #FFC2E6;
     --text-color-main: #353430;
@@ -62,13 +62,13 @@
     --bg-img: url(../images/cover-image-light.png);
   }
 
-  @media (min-width: 376px) and (max-width: 768px) {
+  @media (min-width: 767px) and (max-width: 1023px) {
     :root {
       --text-shadow: #FF8DCB;
     }
   }
 
-  @media (min-width: 0px) and (max-width: 375px) {
+  @media (min-width: 0px) and (max-width: 767px) {
     :root {
       --text-shadow: #FF8DCB;
     }
