@@ -22,22 +22,6 @@
   --link-bg-color: #FF0070;
   --link-border-color: #F1B2CE;
   --text-shadow: #FF0070;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-font: 'IBM Plex Mono', sans-serif;
-    --bg-color: #000028;
-    --title-bg-color: #FF0070;
-    --text-color-main: #F1B2CE;
-    --text-color-title: #DB00FF;
-    --text-color-subtitle: #FF0070;
-    --text-color-title-main: #FF0070;
-    --text-color-buttons: #FF0070;
-    --text-color-link: #F1B2CE;
-    --link-bg-color: #FF0070;
-    --link-border-color: #F1B2CE; 
-    --text-shadow: #FF0070;
-  }
+  --bg-img: url(../images/cover-image-dark.png);
 }
 

@@ -6,6 +6,10 @@
   color: var(--text-color-main, #F1B2CE);
   font-family: var(--main-font, monospace);
   background-color: var(--bg-color);
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-position: top center;
 }
 
 /* Стили для хедера */
@@ -13,10 +17,6 @@
 .header {
   min-block-size: 100vh;
   position: relative;
-  background-image: url(../images/cover-image-dark.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .decorated-zone {
@@ -187,7 +187,6 @@ a.text-link:focus-visible {
 .title-decor {
   display: inline-block;
   color: #000028;
-  overflow: hidden;
   background-color: var(--text-color-subtitle);
 }
 
@@ -514,10 +513,6 @@ h4.heading.title-decor {
 
 @media (min-width: 0px) and (max-width: 375px) {
    /* Переопределение стилей для хедера ширина 375px */
-
-   * {
-    outline: 2px solid red;
-   }
 
   .decorated-zone {
     grid-template-rows: 224px 215px 100px;

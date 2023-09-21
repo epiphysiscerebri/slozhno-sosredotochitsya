@@ -21,6 +21,7 @@
   --link-bg-color: #FFC2E6;
   --link-border-color: #353430;
   --text-shadow: #FF0070;
+  --bg-img: url(../images/cover-image-light.png);
 }
 
 @media (min-width: 376px) and (max-width: 768px) {
@@ -37,8 +38,8 @@
 
 /* Фоновая картинка в хедере */
 
-.page.theme_light .header {
-  background-image: url(../images/cover-image-light.png);
+.page.theme_light {
+  background-image: var(--bg-img);
 }
 
 .page.theme_light .header__theme-menu-rec {
@@ -58,6 +59,7 @@
     --text-color-link: #353430;
     --link-bg-color: #FFC2E6;
     --link-border-color: #353430;   
+    --bg-img: url(../images/cover-image-light.png);
   }
 
   @media (min-width: 376px) and (max-width: 768px) {
@@ -78,8 +80,8 @@
     display: none;
   }
 
-  .page.theme_auto .header {
-    background-image: url(../images/cover-image-light.png);
+  .page.theme_auto {
+    background-image: var(--bg-img);
   }
 
 }
