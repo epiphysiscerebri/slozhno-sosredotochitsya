@@ -3,25 +3,27 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   margin: auto;
+  padding-top: 3px;
   color: var(--text-color-main, #F1B2CE);
   font-family: var(--main-font, monospace);
   background-color: var(--bg-color);
   background-image: var(--bg-img);
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  background-position: top center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
 }
 
 /* Стили для хедера */
 
 .header {
-  min-block-size: 100vh;
+  height: 100vh;
   position: relative;
 }
 
 .decorated-zone {
   display: grid;
-  grid-template-rows: 62px 1fr 240px;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .header__theme-menu {
@@ -57,7 +59,7 @@
   font-size: 18px;
   align-self: center;
   text-transform: uppercase;
-  color: var(--text-color-subtitle);
+  color: var(--text-color-title-main);
 }
 
 .decorative_frames::after {
@@ -127,17 +129,15 @@
 }
 
 .header__title {
-  display: flex;
-  gap: 95px;
+  max-inline-size: 100vw;
+  padding-top: 0px;
   text-shadow: 4px 4px 0px #FF0070;
   color: var(--text-color-title, #DB00FF);
   font-family: var(--main-font, monospace);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   font-style: normal;
   font-weight: 700;
-  align-self: end;
-  margin-block-start: 0.67em;
-  margin-block-end: 43px;
+  align-self: center;
 }
 
 .header_layout_paragraph {
@@ -147,14 +147,16 @@
 }
 
 .header_paragraph {
-  width: 491px;
-  height: 71px;
-  margin-block-start: 35px;
+  max-inline-size: 100vw;
+  max-width: 491px;
+  max-height: 70px;
+  margin-block-start: 50px;
   margin-inline-end: 20px;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   justify-self: end;
+  align-self: start;
 }
 
 a.text-link:active,
@@ -185,8 +187,7 @@ a.text-link:focus-visible {
 }
 
 .title-decor {
-  display: inline-block;
-  color: #000028;
+  color: var(--text-color-title-h2);
   background-color: var(--text-color-subtitle);
 }
 
@@ -213,7 +214,7 @@ h3.heading.title-decor {
 
 .first-section {
   display: grid;
-  column-gap: 20px;
+  column-gap: 12px;
   row-gap: 19px;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(2, 1fr);
@@ -349,6 +350,7 @@ h4.heading.title-decor {
 
 .footer {
   display: flex;
+  margin-top: 62px;
   min-block-size: 100vh;
   justify-content: center;
   align-items: center;
@@ -366,10 +368,14 @@ h4.heading.title-decor {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   /* Переопределение стилей для хедера ширина 768px */
+  
+  .page {
+    padding-top: 0px;
+  }
 
   .decorated-zone {
     position: relative;
-    grid-template-rows: 341px 341px 341px;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   .header__theme-menu {
@@ -387,14 +393,16 @@ h4.heading.title-decor {
 
   .header__title {
     gap: 70px;
+    padding-top: 0px;
     text-shadow: 4px 4px 0px var(--text-shadow);
-    margin-block-end: 89px;
   }
 
   .header_paragraph {
-    width: 47.5%;
-    height: 117px;
+    max-width: 47%;
+    max-height: 114px;
     margin-block-start: 44px;
+    align-self: start;
+    margin-inline-end: 20px;
   }
   /* Переопределение стилей для основной части страницы ширина 768px */
 
@@ -406,7 +414,7 @@ h4.heading.title-decor {
   }
   
   .first-section h2.heading {
-    font-size: 18;
+    font-size: 18px;
   }
 
   /* Вторая секция main */
@@ -475,6 +483,7 @@ h4.heading.title-decor {
   /* Футер */
 
   .footer {
+    margin-top: 65px;
     margin-bottom: 20px; 
     min-block-size: 984px;
   }
@@ -514,6 +523,7 @@ h4.heading.title-decor {
 
   .page {
     /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    padding-top: 0px;
     background-size: auto 100vh;
   }
 
@@ -535,12 +545,11 @@ h4.heading.title-decor {
   }
 
   .header__title {
-    margin-block-end: 0px;
+    padding-top: 25px;
     text-shadow: 4px 4px 0px var(--text-shadow);
     padding-inline-start: 10px;
-    letter-spacing: -2px;
-    line-height: 100px;
-    padding-bottom: 5px;
+    letter-spacing: -3px;
+    line-height: 98px;
   }
 
   .header_layout_paragraph {
@@ -548,9 +557,10 @@ h4.heading.title-decor {
   }
 
   .header_paragraph {
-    width: 355px;
-    height: 117px;
-    margin-block-start: 47px;
+    min-width: 355px;
+    max-height: 114px;
+    margin-inline-end: 10px;
+    margin-block-end: 68px;
   }
 
   .header__theme-menu-rec {
@@ -574,6 +584,7 @@ h4.heading.title-decor {
     gap: 50px;
     padding-top: 40px;
     padding-left: 10px;
+    padding-right: 10px;
   }
 
   .main_paragraph {
@@ -602,7 +613,7 @@ h4.heading.title-decor {
   .third-section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
   }
 
   /* Четвёртая секция main */
@@ -667,8 +678,11 @@ h4.heading.title-decor {
   /* Стили для футера */
 
   .title__footer {
-    margin-bottom: 50px;
     font-size: 116px;
+  }
+
+  .footer {
+    margin-top: 40px;
   }
 
   .footer.decorative_frames::after {
